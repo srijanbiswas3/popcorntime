@@ -1,0 +1,36 @@
+/* MovieDetail.css */
+.movie-details {
+  padding: 20px;
+  height: 100vh;
+}
+
+.movie-details img {
+  max-width: 100%; /* Ensure the image is not wider than its container */
+  max-height: 300px; /* Set a maximum height for the image */
+  display: block; /* Center the image horizontally */
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Other styles for the rest of the content */
+.movie-details h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  display: flex;
+}
+
+.movie-details p {
+  font-size: 16px;
+  margin: 10px 0;
+  
+}
+
+.movie-details button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+}
