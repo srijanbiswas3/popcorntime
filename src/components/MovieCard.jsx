@@ -7,7 +7,9 @@ function MovieCard({movie}) {
   return (
     <div className='movie-card' onClick={()=>navigate(`/${movie.imdbID}`)}>
       <img src={movie.Poster} alt={movie.Title} />
-      <h3>{movie.Title}</h3>
+      <hr/>
+      <h4>{movie.Title}</h4>
+      <hr/>
       <p>{movie.Year}</p>
       
     </div>

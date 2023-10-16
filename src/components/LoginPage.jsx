@@ -1,5 +1,7 @@
 import React from 'react'
 import "./LoginPage.css"
+import googleImage from "../images/googlelogo.png"
+import appleImage from "../images/applelogo.png"
 
 function LoginPage() {
   return (
@@ -11,11 +13,11 @@ function LoginPage() {
             Login
         </button>
         <button className="login-button google-button">
-            <img className="button-logo" src="../googlelogo.png" alt="Google Logo"/>
+            <img className="button-logo" src={googleImage} alt="Google Logo"/>
             Login with Google
         </button>
         <button className="login-button apple-button">
-            <img className="button-logo" src="./applelogo.png" alt="Apple Logo"/>
+            <img className="button-logo" src={appleImage} alt="Apple Logo"/>
             Login with Apple
         </button>
     </div>

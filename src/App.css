@@ -39,3 +39,8 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: 'Aclonica', sans-serif;
+  font-size: 22px;
+}

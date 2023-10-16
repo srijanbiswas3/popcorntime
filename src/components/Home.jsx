@@ -11,7 +11,9 @@ import NotFound from './NotFound'
 import Loading from './Loading';
 import MovieDetail from './MovieDetail'
 import LoginPage from './LoginPage'
+import "./Home.css"
 import { Routes, Route, useNavigate } from "react-router-dom";
+import popCornImage from "../images/popcorn.png"
 
 function Home() {
   const navigate = useNavigate()
@@ -51,27 +53,29 @@ function Home() {
   };
 
   return (
-    <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+    <div className='home-container'>
+
+      <Navbar expand="lg" className="nav-container ">
         <Container fluid>
-          <img src="../popcorn.png" height={80} alt="popcorn time logo" />
-          <Navbar.Brand href="/">PopCornTime</Navbar.Brand>
+          <img onClick={() => navigate('/')} src={popCornImage} height={80} alt="popcorn time logo" />
+          <Navbar.Brand onClick={() => navigate('/')} className="name">PopCornTime</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
-              navbarScroll
+
             >
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link onClick={() => navigate('/')} className='dropdown-button'>Home</Nav.Link>
               {/* <Nav.Link href="#action2">Link</Nav.Link> */}
-              <NavDropdown title={getNavDropdownTitle()} id="navbarScrollingDropdown" onSelect={handleTypeDropdown}>
-                <NavDropdown.Item eventKey="movie">Movies</NavDropdown.Item>
-                <NavDropdown.Item eventKey="series">Tv Shows</NavDropdown.Item>
-                <NavDropdown.Item eventKey="episode">Episodes</NavDropdown.Item>
+              <NavDropdown className=" dropdown-button " title={getNavDropdownTitle()} id="navbarScrollingDropdown" onSelect={handleTypeDropdown}>
+                <NavDropdown.Item className='dropdown-option' eventKey="movie">Movies</NavDropdown.Item>
+                <NavDropdown.Item className='dropdown-option' eventKey="series">Tv Shows</NavDropdown.Item>
+                <NavDropdown.Item className='dropdown-option' eventKey="episode">Episodes</NavDropdown.Item>
               </NavDropdown>
 
             </Nav>
+
             <Form className="d-flex">
               <Form.Control
                 type="search"
@@ -84,10 +88,11 @@ function Home() {
               />
               <Button variant="outline-success" onClick={() => { navigate("/"); handleClick(type) }}>Search</Button>
             </Form>
+            <Button className='m-3' variant="outline-primary" onClick={() => navigate('/login')}>Login</Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <button onClick={() => navigate('/login')}>Login</button>
+
       <Routes>
         <Route
           path="/"
@@ -95,7 +100,7 @@ function Home() {
             loading ? (
               <Loading />
             ) : movies ? (
-              <MovieList movies={movies} />
+              <MovieList movies={movies} type={getNavDropdownTitle()} movieSearch={movieName} />
             ) : (
               <NotFound />
             )
@@ -111,7 +116,7 @@ function Home() {
 
 
 
-    </>
+    </div>
   )
 }
 

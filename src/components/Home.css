@@ -1,0 +1,88 @@
+/* Custom CSS for the Home component */
+.home-container {
+    background: linear-gradient(135deg, #7b4397, #dc2430);
+    padding: 30px;
+    display: block;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 22px;
+  }
+
+   
+  
+  .name{
+    font-style: bold;
+    color: black;
+    
+  }
+  h1, h2, h3 {
+    font-family: 'Georgia', serif; /* Example of a serif font for headings */
+  }
+  .nav-container{
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  
+    
+  }
+  /* Dropdown container style */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button style */
+.dropdown-button {
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  max-height: 40px;
+  margin-top: 20px;
+  margin: 5px;
+  
+}
+
+/* Dropdown content (the list of options) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: bisque;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Dropdown options style */
+.dropdown-option {
+  z-index: 1;
+  padding: 10px;
+  text-align: center;
+  color: #7b4397;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for dropdown options */
+.dropdown-option:hover {
+  background-color: #7b4397;
+  color: #fff;
+}
+
+/* Show the dropdown content when button is hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style for the active option */
+.dropdown.active .dropdown-button {
+  background-color: #7b4397;
+}
+
+/* Style for the active option on hover */
+.dropdown.active .dropdown-button:hover {
+  background-color: #7b4397;
+}
+

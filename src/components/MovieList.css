@@ -1,6 +1,21 @@
 /* Apply flexbox layout to the movie list */
+
+.movie-container{
+color: white;
+
+}
 .movie-list {
+  padding: 40px;
     display: flex;
     flex-wrap: wrap; /* Wrap to the next row when there's not enough space */
     gap: 20px; /* Add some spacing between movie cards */
+    margin: 20px;
   }
+
+  .dropdown{
+    margin: 20px;
+  }
+  h2{
+    z-index: -1;
+  }
+  
