@@ -20,9 +20,7 @@ export const getMovies = (movieName = "superman", type = "movie") => {
       if (data.Search) {
         console.log("API Response Data:", data.Search);
         return data.Search;
-      } else {
-        throw new Error("OMDB API did not return expected data.");
-      }
+      } 
     })
     .catch((error) => {
       // Handle errors here, you can log or display user-friendly messages

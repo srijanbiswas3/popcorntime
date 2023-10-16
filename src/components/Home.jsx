@@ -99,18 +99,17 @@ function Home() {
           element={
             loading ? (
               <Loading />
-            ) : movies ? (
+            ) : movies && movies.length > 0 ? (
               <MovieList movies={movies} type={getNavDropdownTitle()} movieSearch={movieName} />
             ) : (
               <NotFound />
             )
           }
-        >
-          {/* Add the movie detail route with a parameter */}
-
-        </Route>
+        />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/:movieID" element={<MovieDetail />} />
+
+        {/* Define the NotFound route at the end */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 

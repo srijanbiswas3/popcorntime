@@ -40,8 +40,11 @@
   max-height: 40px;
   margin-top: 20px;
   margin: 5px;
+
   
 }
+
+
 
 /* Dropdown content (the list of options) */
 .dropdown-content {
@@ -84,5 +87,6 @@
 /* Style for the active option on hover */
 .dropdown.active .dropdown-button:hover {
   background-color: #7b4397;
+  color: #7b4397;
 }
 

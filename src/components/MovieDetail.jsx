@@ -5,12 +5,12 @@ import Loading from './Loading';
 import './MovieDetail.css';
 
 function MovieDetail() {
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState();
   const { movieID } = useParams();
 
   useEffect(() => {
     getMovie(movieID)
-      .then((data) => setMovie(data))
+      .then((data) => {if(data.Response==="True")setMovie(data)})
       .catch((error) => console.error(error));
   }, [movieID]);
 
