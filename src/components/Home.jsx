@@ -10,6 +10,7 @@ import MovieList from './MovieList';
 import NotFound from './NotFound'
 import Loading from './Loading';
 import MovieDetail from './MovieDetail'
+import LoginPage from './LoginPage'
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 function Home() {
@@ -86,7 +87,7 @@ function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
+      <button onClick={() => navigate('/login')}>Login</button>
       <Routes>
         <Route
           path="/"
@@ -103,6 +104,7 @@ function Home() {
           {/* Add the movie detail route with a parameter */}
 
         </Route>
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/:movieID" element={<MovieDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

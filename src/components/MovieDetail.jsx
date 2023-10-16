@@ -24,7 +24,7 @@ function MovieDetail() {
             <img src={movie.Poster} alt={movie.Title} />
             <h1>{movie.Title}</h1>
             <p>{movie.Plot}</p>
-            <p>Rating: {movie.Ratings.map((rating,i) => (<li key={i}>{rating.Source} {rating.Value}</li>))}</p>
+            <p>Rating: {movie?.Ratings.map((rating,i) => (<li key={i}>{rating.Source} {rating.Value}</li>))}</p>
             <button>Watch Now</button>
           </div>
 

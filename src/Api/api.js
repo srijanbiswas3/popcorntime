@@ -1,4 +1,4 @@
-const omdbKey = "ad944860";
+const omdbKey = process.env.REACT_APP_OMDB_KEY;
 
 export const getMovies = (movieName = "superman", type = "movie") => {
   const url = `http://www.omdbapi.com/?apikey=${omdbKey}&s=${movieName}&type=${type}`;

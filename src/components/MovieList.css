@@ -4,5 +4,3 @@
     flex-wrap: wrap; /* Wrap to the next row when there's not enough space */
     gap: 20px; /* Add some spacing between movie cards */
   }
-
-  
