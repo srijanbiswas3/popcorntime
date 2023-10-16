@@ -1,7 +1,7 @@
 const omdbKey = process.env.REACT_APP_OMDB_KEY;
 
 export const getMovies = (movieName = "superman", type = "movie") => {
-  const url = `http://www.omdbapi.com/?apikey=${omdbKey}&s=${movieName}&type=${type}`;
+  const url = `https://www.omdbapi.com/?apikey=${omdbKey}&s=${movieName}&type=${type}`;
 
   console.log(url); // Log the API request URL
 
@@ -24,7 +24,7 @@ export const getMovies = (movieName = "superman", type = "movie") => {
 };
 
 export const getMovie=(movieID)=>{
-  const url = `http://www.omdbapi.com/?apikey=${omdbKey}&i=${movieID}&plot=full`;
+  const url = `https://www.omdbapi.com/?apikey=${omdbKey}&i=${movieID}&plot=full`;
 
   console.log(url); // Log the API request URL
 
